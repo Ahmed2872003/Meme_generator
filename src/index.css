@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to right, #672280, #a626d3);
+  padding: 10px 40px;
+  color: white;
+}
+.header--Fsection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.header--Fsection img {
+  width: 65px;
+}
+.header--Fsection h1 {
+  font-size: 35px;
+}
+nav > h3 {
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  nav {
+    flex-direction: column;
+  }
+  .header--Fsection {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 70px;
+}
+main form {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  margin: auto;
+}
+main form input {
+  display: block;
+  background-color: #eeeeee;
+  padding: 15px 10px;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 2px solid black;
+  margin: 0 5px;
+  font-size: 15px;
+  transition: 0.3s;
+  margin: 0;
+  width: 100%;
+  outline: none;
+}
+main form input:focus {
+  border-bottom-color: #672280;
+}
+.input--con {
+  position: relative;
+  width: calc(100% / 2);
+}
+@media (max-width: 767px) {
+  main form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .input--con {
+    width: 100%;
+  }
+  main {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.input--con span {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+.input--con input:focus + span,
+.input--con input:not(:focus):valid + span {
+  top: -2px;
+  left: 0px;
+  transform: scale(0.8);
+}
+.meme--btn {
+  width: 100%;
+  margin: 30px 0;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 20px 0;
+  border: none;
+  outline: none;
+  background-color: #672280;
+  cursor: pointer;
+  text-align: center;
+}
+
+.img--con {
+  position: relative;
+}
+.img--con img {
+  display: block;
+}
+#upperText,
+#bottomText {
+  position: absolute;
+  font-weight: 700;
+  font-size: 50px;
+  margin: 0;
+  left: 5px;
+  width: calc(100% - 5px);
+  overflow-wrap: break-word;
+  pointer-events: none;
+  font-family: "Vast Shadow", cursive;
+}
+#upperText {
+  top: 5px;
+}
+#bottomText {
+  bottom: 5px;
+}
+#color {
+  align-self: flex-start;
+  padding: 10px 0;
+}
